@@ -1,8 +1,8 @@
 # algoexercise
 
 good resource to exercise :
-- https://www.hackerrank.com/domains/cpp?filters%5Bdifficulty%5D%5B%5D=easy 
-- https://projecteuler.net/archives
-- https://leetcode.com/explore/interview/card/top-interview-questions-easy/
+- [basic cpp hackerrank](https://www.hackerrank.com/domains/cpp?filters%5Bdifficulty%5D%5B%5D=easy)  (min, solve 15 question)
+- [algorithm projecteuler](https://projecteuler.net/archives) (min, solve 8 question)
+- [top easy interview leetcode](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
 
 please use c++ language
