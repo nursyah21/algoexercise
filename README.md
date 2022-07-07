@@ -5,4 +5,11 @@ good resource to exercise :
 - [algorithm projecteuler](https://projecteuler.net/archives) (min, solve 6 question)
 - [top easy interview leetcode](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
 
+deadline 15 july
+
 please use c++ language
+
+compiler online: https://www.online-cpp.com/
+
+example: [example](example)
+
