@@ -9,4 +9,7 @@ deadline 15 july
 
 please use c++ language
 
-example: 
+compiler online: https://www.online-cpp.com/
+
+example: [example](example)
+
