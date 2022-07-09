@@ -9,7 +9,7 @@ vector<int> parseInts(string str) {
     vector<int> out;
     char ch;
     int temp;
-    while(ss >> temp){
+    while(ss >> temp) {
         out.push_back(temp);
         ss >> ch;
     }

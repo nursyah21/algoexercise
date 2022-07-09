@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void update(int *a,int *b) {
+void update(int *a, int *b) {
     // Complete this function  
     int temp = *a;
     *a = *a + *b;
     *b = temp - *b;
 
-    if(*b < 0){
+    if(*b < 0) {
         *b = -(*b);
     }
 }

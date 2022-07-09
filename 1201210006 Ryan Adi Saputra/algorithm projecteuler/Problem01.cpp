@@ -6,14 +6,13 @@
     Find the sum of all the multiples of 3 or 5 below 1000.
 */
 
-//  Expected Answer: 233168
 
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
     int sumMultiples = 0;
-    for (int i = 0; i < 1000; ++i){
+    for (int i = 0; i < 1000; ++i) {
         if (!(i % 3 && i % 5)) {
             sumMultiples += i;
         }
@@ -22,3 +21,8 @@ int main(){
     cout << sumMultiples << "\n";
     return 0;
 }
+
+
+
+
+//  Expected Answer: 233168
