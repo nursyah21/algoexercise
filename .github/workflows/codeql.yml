@@ -21,6 +21,7 @@ on:
     - cron: '32 8 * * 5'
 
 jobs:
+  # anaylize source code
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
@@ -51,3 +52,36 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+
+
+  # update content readme.md
+  generate:
+    - name: Generate
+      runs-on: ubuntu-latest
+      permissions:
+        actions: read
+        contents: read
+        security-events: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Configure Github Action
+      run: |
+        git config --global user.name github-action
+        git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+
+    - name: Update README.md file
+
+    - name: Update README.md file
+      run: bash generate.sh
+
+    - name: Commit changes if README.md is different
+      run: |
+        if [[ `git status --porcelain` ]]; then
+          git commit -am "Updated progress in README.md"
+          git push
+        else
+          echo "NO CHANGES DETECTED"
+        fi
