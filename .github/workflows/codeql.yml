@@ -47,6 +47,7 @@ jobs:
         languages: ${{ matrix.language }}
     - run: |
        echo "Run, Build Application using script"
+       find -name "*cpp" |while read i;do g++ $i;done
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
