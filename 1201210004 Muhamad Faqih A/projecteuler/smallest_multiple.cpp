@@ -1,11 +1,9 @@
 #include <iostream>
-
 using namespace std;
-
-bool divide;
 
 int main()
 {
+    bool divide;
     for (long i = 2520; ; i += 20){
         divide = true;
         for (int j = 20; j > 10; j--){
