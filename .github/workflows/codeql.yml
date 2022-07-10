@@ -51,7 +51,7 @@ jobs:
        n=1
        total=`find -name "*.cpp" | wc -l`
        find -name "*.cpp" |while read i;do 
-        printf "\r%d / %d" $n $total
+        printf "\r%d / %d %s" $n $total $i
         g++ $i;
         n=`echo $n+1 |bc`
        done
@@ -61,6 +61,11 @@ jobs:
       uses: github/codeql-action/analyze@v2
 
   # update content readme.md
+
+    - name: Configure Github Action
+      run: |
+        git config --global user.name github-action
+        git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
 
     - name: Update README.md file
       run: bash generate.sh
