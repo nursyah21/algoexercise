@@ -22,8 +22,8 @@ on:
 
 jobs:
   # anaylize source code
-  analyze:
-    name: Analyze
+  CI:
+    name: Continues integration
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -48,31 +48,19 @@ jobs:
         languages: ${{ matrix.language }}
     - run: |
        echo "Run, Build Application using script"
-       find -name "*.cpp" |while read i;do g++ $i;done
+       n=1
+       total=`find -name "*.cpp" | wc -l`
+       find -name "*.cpp" |while read i;do 
+        printf "\r%d / %d" $n $total
+        g++ $i;
+        n=`echo $n+1 |bc`
+       done
+       echo
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
 
-
   # update content readme.md
-  generate:
-    - name: Generate
-      runs-on: ubuntu-latest
-      permissions:
-        actions: read
-        contents: read
-        security-events: write
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Configure Github Action
-      run: |
-        git config --global user.name github-action
-        git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
-
-    - name: Update README.md file
 
     - name: Update README.md file
       run: bash generate.sh
