@@ -1,8 +1,12 @@
 name: Generate Documentation
 on: 
   push:
-    branches:
-      - master
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+  schedule:
+    - cron: '32 8 * * 5'
 
 jobs:
   generate_readme:
