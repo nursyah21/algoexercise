@@ -64,17 +64,11 @@ jobs:
 
     - name: Configure Github Action
       run: |
-        git config --global user.name github-action
-        git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
-
+        git config --local user.name 'github-action[bot]'
+        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+        
     - name: Update README.md file
       run: bash generate.sh
 
-    - name: Commit changes if README.md is different
-      run: |
-        if [[ `git status --porcelain` ]]; then
-          git commit -am "Updated progress in README.md"
-          git push
-        else
-          echo "NO CHANGES DETECTED"
-        fi
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
