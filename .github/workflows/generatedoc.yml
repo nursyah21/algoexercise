@@ -1,0 +1,31 @@
+name: Generate Documentation
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  generate_readme:
+    name: Markdown Generation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Configure Github Action
+        run: |
+          git config --global user.name github-action
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+        
+      - name: Update README.md file
+        run: ./generate.sh
+
+      - name: Commit changes if README.md is different
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git commit -am "Updated progress in README.md"
+            git push
+          else
+            echo "NO CHANGES DETECTED"
+          fi

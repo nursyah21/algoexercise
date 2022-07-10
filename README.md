@@ -11,5 +11,21 @@ please use c++ language
 
 compiler online: https://www.online-cpp.com/
 
-example: [example](example)
+---
 
+[1201210002_MochammadRizqi](1201210002_MochammadRizqi)
+- hackerrank: 1
+
+[1201210003_DamasyaIne](1201210003_DamasyaIne)
+- Hackerrank: 8
+
+[1201210004_MuhamadFaqih](1201210004_MuhamadFaqih)
+- Hackerrank: 14
+
+[1201210013_WahyuFidi](1201210013_WahyuFidi)
+
+[1201210016_RifqyAttaufi](1201210016_RifqyAttaufi)
+- HackerRank: 14
+- projecteuler: 6
+
+[1201210020_AkbarRizki](1201210020_AkbarRizki)
