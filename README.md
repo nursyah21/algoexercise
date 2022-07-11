@@ -1,6 +1,7 @@
 # algoexercise
 
 ![](https://github.com/nursyah21/algoexercise/workflows/CodeQL/badge.svg)
+
 good resource to exercise :
 - [basic cpp hackerrank](https://www.hackerrank.com/domains/cpp?filters%5Bdifficulty%5D%5B%5D=easy)  (min: solve 14 question)
 - [algorithm projecteuler](https://projecteuler.net/archives) (min: solve 6 question)
