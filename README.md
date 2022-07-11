@@ -15,8 +15,8 @@ compiler online: https://www.online-cpp.com/
 
 ---
 
-[1201210002_MochammadRizqiAzmi](1201210002_MochammadRizqiAzmi)
-- hackerrank: 1
+[1201210002_MochammadRizqi](1201210002_MochammadRizqi)
+- hackerrank: 14
 - projecteuler: 6
 
 [1201210003_DamasyaIne](1201210003_DamasyaIne)
