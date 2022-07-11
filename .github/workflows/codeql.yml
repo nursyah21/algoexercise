@@ -62,16 +62,16 @@ jobs:
 
   # update content readme.md
 
-    - name: Configure Github Action
-      run: |
-        git config --local user.name 'github-action[bot]'
-        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+    # - name: Configure Github Action
+    #   run: |
+    #     git config --local user.name 'github-action[bot]'
+    #     git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         
-    - name: Update README.md file
-      run: bash generate.sh
+    # - name: Update README.md file
+    #   run: bash generate.sh
 
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@v0.6.0
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
