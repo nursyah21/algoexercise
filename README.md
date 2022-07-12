@@ -33,5 +33,3 @@ compiler online: https://www.online-cpp.com/
 - projecteuler: 6
 
 [1201210020_AkbarRizki](1201210020_AkbarRizki)
-
-[algoexercise](algoexercise)
