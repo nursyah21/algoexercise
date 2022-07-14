@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # list every directory
 # count file cpp and filter with name of folder
 
@@ -17,14 +19,16 @@ header(){
 
   printf "compiler online: https://www.online-cpp.com/\n\n"
  
+  printf "*Nama file dan folder jangan ada spasi*\n\n"
 }
 
 
 generate(){
 
   echo "---"
-
+  num=0
   ls -l | grep "^d" | awk '{print $NF}'| while read i;do
+    num=$(($num+1))
     # show name folder
     printf "\n[%s](%s)" $i $i; cd $i; 
     
@@ -35,11 +39,11 @@ generate(){
     done
 
     cd ..
-
     printf "\n"
   done
-}
 
+  printf "\ntotal %d\n"  $num
+}
 
 
 header > README.md

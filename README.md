@@ -13,16 +13,20 @@ please use c++ language
 
 compiler online: https://www.online-cpp.com/
 
-*Nama file dan folder jangan ada spasinya*
+*Nama file dan folder jangan ada spasi*
 
 ---
+
+[1201200044_ArjunPrasetya](1201200044_ArjunPrasetya)
+- Hackerrank: 1
+- Projecteuler: 6
 
 [1201210002_MochammadRizqi](1201210002_MochammadRizqi)
 - hackerrank: 14
 - projecteuler: 6
 
 [1201210003_DamasyaIne](1201210003_DamasyaIne)
-- Hackerrank: 8
+- Hackerrank: 15
 
 [1201210004_MuhamadFaqih](1201210004_MuhamadFaqih)
 - Hackerrank: 14
@@ -63,3 +67,5 @@ compiler online: https://www.online-cpp.com/
 [1201210024_SahityaRizkyHadiSusetyo](1201210024_SahityaRizkyHadiSusetyo)
 - hackerrank: 14
 - projecteuler: 6
+
+total 13

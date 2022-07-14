@@ -60,7 +60,7 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
 
-  update content readme.md
+    # update content readme.md
 
     - name: Configure Github Action
       run: |
@@ -68,7 +68,7 @@ jobs:
         git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         
     - name: Update README.md file
-      run: bash generate.sh
+      run: zsh generate.sh
 
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
