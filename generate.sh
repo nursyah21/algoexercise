@@ -29,7 +29,8 @@ generate(){
     printf "\n[%s](%s)" $i $i; cd $i; 
     
     # traverse to every folder name
-    ls -l | grep "^d" | awk '{print $NF}' |while read j;do
+    ls -l | grep "^d" | awk '{print $NF}' |while read j;
+    do
       printf "\n- %s: %d" $j `ls $j | wc -l`
     done
 
