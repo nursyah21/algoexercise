@@ -1,33 +1,27 @@
 #include <iostream>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 
-int main()
-{
-    int number = 2, factor;
-    long long sisa = 600851475143;
-
-    while (number <= sisa)
-    {
-        bool isPrime = true;
-        for (int i = 2; i < number; i++)
-        {
-            if (number % i == 0)
-            {
-                isPrime = false;
-                break;
-            }
+int main(){
+    long long number = 600'851'475'143LL;
+    long long highestPrimeFactor = 0LL;
+    long long currentFactor = 2LL;
+    while (number > highestPrimeFactor){
+        if (
+            (number % currentFactor == 0) && 
+            (currentFactor > highestPrimeFactor)
+        ){
+            highestPrimeFactor = currentFactor;
+            number /= currentFactor;
         }
-        if (isPrime)
+        else
         {
-            if (sisa%number==0)
-            {
-                factor = number;
-                sisa /= number;
-            }    
+            ++currentFactor;   
         }
-        number++;
     }
-
-    cout<<factor;
+    
+    cout << highestPrimeFactor << "\n";
+    return 0;
 }
