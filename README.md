@@ -13,6 +13,8 @@ please use c++ language
 
 compiler online: https://www.online-cpp.com/
 
+*Nama file dan folder jangan ada spasinya*
+
 ---
 
 [1201210002_MochammadRizqi](1201210002_MochammadRizqi)
