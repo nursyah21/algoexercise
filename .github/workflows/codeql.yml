@@ -51,8 +51,8 @@ jobs:
        n=1
        total=`find -name "*.cpp" | wc -l`
        find -name "*.cpp" |while read i;do 
-        printf "\r%d / %d %s" $n $total $i
-        g++ $i;
+        printf "\r%d / %d %s" $n $total "$i"
+        g++ "$i";
         n=`echo $n+1 |bc`
        done
        echo
@@ -60,18 +60,18 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
 
-  # update content readme.md
+    # update content readme.md
 
-    # - name: Configure Github Action
-    #   run: |
-    #     git config --local user.name 'github-action[bot]'
-    #     git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+    - name: Configure Github Action
+      run: |
+        git config --local user.name 'github-action[bot]'
+        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         
-    # - name: Update README.md file
-    #   run: bash generate.sh
+    - name: Update README.md file
+      run: zsh generate.zsh
 
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@v0.6.0
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.TOKEN }}
 
