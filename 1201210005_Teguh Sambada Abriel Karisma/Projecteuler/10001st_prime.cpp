@@ -1,18 +1,39 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
-int main() {
+bool isPrime(int a){
+    if (a==2||a==3){
+        return true;
+    }
+    if (a%2==0){
+        return false;
+    }
 
-  int sum = 0;
+    bool prime=true;
+    for (int b=2;b<sqrt(a);b++){
+        if (a%b==0)
+            prime=false;
 
-	for (int i = 3; i < 1000; i++) {
-
-		if (i%3==0 or i%5==0)
-
-			sum += i;
-	}
-
-	cout << sum;
-
-	return 0;
+    }
+    if (prime==true)
+        return true;
+    else 
+        return false;
 }
+
+int main(){
+    int infinite=0;
+    long long int primecounter=0;
+    for (int c=2;infinite==0;c++){
+        if (isPrime(c)==true){
+            primecounter++;
+            //cout<<c<<endl;
+            if (primecounter==10001)
+                {cout<<c;
+
+            break;}
+        }
+    }
+    return 0;
+    }
