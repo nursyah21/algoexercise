@@ -35,7 +35,7 @@ generate(){
     # traverse to every folder name
     ls -l | grep "^d" | awk '{print $NF}' |while read j;
     do
-      printf "\n- %s: %d" $j `ls $j | wc -l`
+      printf "\n- %s: %d" $j `find $j -name "*.cpp" | wc -l`
     done
 
     cd ..

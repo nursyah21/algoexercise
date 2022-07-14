@@ -18,7 +18,7 @@ compiler online: https://www.online-cpp.com/
 ---
 
 [1201200044_ArjunPrasetya](1201200044_ArjunPrasetya)
-- Hackerrank: 1
+- Hackerrank: 14
 - Projecteuler: 6
 
 [1201210002_MochammadRizqi](1201210002_MochammadRizqi)
@@ -26,14 +26,15 @@ compiler online: https://www.online-cpp.com/
 - projecteuler: 6
 
 [1201210003_DamasyaIne](1201210003_DamasyaIne)
-- Hackerrank: 15
+- Hackerrank: 14
+- projecteuler: 6
 
 [1201210004_MuhamadFaqih](1201210004_MuhamadFaqih)
 - Hackerrank: 14
 - projecteuler: 6
 
 [1201210006_RyanAdiSaputra](1201210006_RyanAdiSaputra)
-- algorithm_projecteuler: 7
+- algorithm_projecteuler: 6
 - hackerrank: 15
 
 [1201210008_FauziRidoPamungkas](1201210008_FauziRidoPamungkas)
