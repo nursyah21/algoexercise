@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int larrgestPalindrome(int n)
+int largestPalindrome(int n)
 {
   int upper_limit = pow(10,n) - 1;
   int lower_limit = pow(10,n) / 10;
@@ -21,7 +21,7 @@ int larrgestPalindrome(int n)
       {
         cout << reverse << " " << number << " " << endl;
         reverse = reverse * 10 + number % 10;
-        rumber /= 10;
+        number /= 10;
         cout << reverse << " " << number << " " << endl;
       }
       if (product == reverse &&

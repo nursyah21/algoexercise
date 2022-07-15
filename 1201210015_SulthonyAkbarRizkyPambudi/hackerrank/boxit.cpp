@@ -62,6 +62,7 @@ void check2()
 			int l,b,h;
 			cin>>l>>b>>h;
 			Box NewBox(l,b,h);
+			
 			temp=NewBox;
 			cout<<temp<<endl;
 		}

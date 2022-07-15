@@ -51,8 +51,8 @@ jobs:
        n=1
        total=`find -name "*.cpp" | wc -l`
        find -name "*.cpp" |while read i;do 
-        printf "\r%d / %d %s" $n $total "$i"
-        g++ "$i";
+        printf "\n%d / %d %s" $n $total "$i"
+        g++ -W "$i";
         n=`echo $n+1 |bc`
        done
        echo

@@ -23,7 +23,7 @@ int main() {
     cin >> str;
 
     vector<int> integers = parseInts(str);
-    for(int i = 0; i < integers.size(); i++) {
+    for(size_t i = 0; i < integers.size(); i++) {
         cout << integers[i] << "\n";
     }
     return 0;
