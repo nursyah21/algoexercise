@@ -24,3 +24,4 @@ cout << factorNumber;
 cin.get();
 	return 0;
 }
+}

@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(int argc, char const *argv[])
-{\
+{
     int sum = 0;
     int upLimit = 2000000;
     bool isPrime[upLimit+1];
@@ -22,6 +22,6 @@ int main(int argc, char const *argv[])
                 j += i;
             }
         }
+            cout << sum << endl;
     }
-    cout << sum << endl;
-}
+
