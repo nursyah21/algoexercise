@@ -19,7 +19,7 @@ header(){
 
   printf "compiler online: https://www.online-cpp.com/\n\n"
  
-  printf "*Nama file dan folder jangan ada spasi*\n\n"
+  printf "*Nama folder jangan ada spasi*\n\n"
 }
 
 
