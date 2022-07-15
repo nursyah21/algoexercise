@@ -30,6 +30,9 @@ jobs:
       contents: read
       security-events: write
 
+    name: Install zsh
+    run: sudo apt-get update; sudo apt-get install zsh
+
     strategy:
       fail-fast: false
       matrix:
@@ -68,10 +71,7 @@ jobs:
         git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         
     - name: Update README.md file
-
-      run: |
-      sudo apt install zsh
-      zsh generate.zsh
+      run: zsh generate.zsh
 
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
