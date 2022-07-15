@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-  int flag=0,count=1,n=2,n;
+  int flag=0,count=1,n=2;
   
   while(count<=10001)
   {
@@ -20,11 +20,11 @@ int main()
     {
       if(count==1000)
       {
-        cout << n;
+        count << n;
       }
       count++;
     }
     n++;
   }
   return 0;
-  }
+}
