@@ -68,7 +68,10 @@ jobs:
         git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         
     - name: Update README.md file
-      run: zsh generate.zsh
+
+      run: |
+      sudo apt install zsh
+      zsh generate.zsh
 
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
