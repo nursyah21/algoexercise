@@ -1,0 +1,80 @@
+# For most projects, this workflow file will not need changing; you simply need
+# to commit it to your repository.
+#
+# You may wish to alter this file to override the set of languages analyzed,
+# or to provide custom queries or build logic.
+#
+# ******** NOTE ********
+# We have attempted to detect the languages in your repository. Please check
+# the `language` matrix defined below to confirm you have the correct set of
+# supported CodeQL languages.
+#
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+  schedule:
+    - cron: '32 8 * * 5'
+
+jobs:
+  # anaylize source code
+  CI:
+    name: Continues integration
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['cpp']
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+    - run: |
+       echo "Run, Build Application using script"
+       n=1
+       total=`find -name "*.cpp" | wc -l`
+       find -name "*.cpp" |while read i;do 
+        printf "\n%d / %d %s" $n $total "$i"
+        g++ -W "$i";
+        n=`echo $n+1 |bc`
+       done
+       echo
+
+    - name: Install zsh
+      run: sudo apt-get update; sudo apt-get install zsh
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+
+    # update content readme.md
+
+    - name: Configure Github Action
+      run: |
+        git config --local user.name 'github-action[bot]'
+        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+        
+    - name: Update README.md file
+      run: zsh generate.zsh
+
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@v0.6.0
+    #   with:
+    #     github_token: ${{ secrets.TOKEN }}
+
