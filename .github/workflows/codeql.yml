@@ -30,9 +30,6 @@ jobs:
       contents: read
       security-events: write
 
-    name: Install zsh
-    run: sudo apt-get update; sudo apt-get install zsh
-
     strategy:
       fail-fast: false
       matrix:
@@ -59,6 +56,9 @@ jobs:
         n=`echo $n+1 |bc`
        done
        echo
+
+    - name: Install zsh
+      run: sudo apt-get update; sudo apt-get install zsh
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
