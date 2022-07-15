@@ -1,9 +1,9 @@
 #include <iostream>
-using namspace std;
+using namespace std;
 
 int main()
 {
-  int flag=(),count=1,n=2,n;
+  int flag=0,count=1,n=2,n;
   
   while(count<=10001)
   {
@@ -22,9 +22,9 @@ int main()
       {
         cout << n;
       }
-      cout++;
+      count++;
     }
     n++;
   }
-  return 0'
+  return 0;
   }
