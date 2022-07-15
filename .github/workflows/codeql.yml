@@ -51,11 +51,14 @@ jobs:
        n=1
        total=`find -name "*.cpp" | wc -l`
        find -name "*.cpp" |while read i;do 
-        printf "\r%d / %d %s" $n $total "$i"
-        g++ "$i";
+        printf "\n%d / %d %s" $n $total "$i"
+        g++ -W "$i";
         n=`echo $n+1 |bc`
        done
        echo
+
+    - name: Install zsh
+      run: sudo apt-get update; sudo apt-get install zsh
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
@@ -70,8 +73,8 @@ jobs:
     - name: Update README.md file
       run: zsh generate.zsh
 
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.TOKEN }}
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@v0.6.0
+    #   with:
+    #     github_token: ${{ secrets.TOKEN }}
 

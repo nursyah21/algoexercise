@@ -15,8 +15,9 @@ void createMap(int &n, string pretag) {
     int i=1;
     if(line[i]=='/') {           // found closing tag
         while(line[i]!='>') i++;
-        if(pretag.size()>(i-2))        // update tag
-            tag = pretag.substr(0,pretag.size()-i+1);
+        int pretagesize = pretag.size();
+        if(pretagesize>(i-2))        // update tag
+            tag = pretag.substr(0,pretagesize-i+1);
         else
             tag = "";
     }

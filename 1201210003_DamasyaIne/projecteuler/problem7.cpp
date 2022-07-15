@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 int main() {
     int flag=0,count=1,n=2,m;
     
@@ -21,4 +22,5 @@ int main() {
         n++;
     }
     return 0;
+
 }

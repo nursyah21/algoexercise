@@ -23,7 +23,9 @@ int main()
     string str;
     cin >> str;
     vector<int> integers = parseInts(str);
-    for(int i = 0; i < integers.size(); i++) 
+
+    // kode yang dibuat sudah dicoba?
+    for(size_t i = 0; i < str.length(); i++) 
     {
         cout << integers[i] << "\n";
     }
