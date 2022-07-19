@@ -1,0 +1,41 @@
+name: "Generate"
+
+on:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: '32 8 * * 5'
+
+jobs:
+  # anaylize source code
+  generate_readme:
+    name: Continues integration
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+
+    - name: Install zsh
+      run: sudo apt-get update; sudo apt-get install zsh
+
+    # update content readme.md
+
+    - name: Configure Github Action
+      run: |
+        git config --local user.name 'github-action'
+        git config --local user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+        
+    - name: Update README.md file
+      run: zsh generate.zsh
+
+    - name: Commit changes if README.md is different
+      run: |
+        if [[ `git status --porcelain` ]];then
+          git commit -am "Updated Documentation in README.md"
+          git push
+        else
+          echo "NO CHANGES DETECTED"
+        fi
+
