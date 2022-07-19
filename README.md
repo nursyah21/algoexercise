@@ -117,4 +117,4 @@ compiler online: https://www.online-cpp.com/
 - hackerrank: 14
 - projecteuler: 6
 
-total 24
+total 25
