@@ -97,6 +97,10 @@ compiler online: https://www.online-cpp.com/
 - hackerrank: 14
 - projecteuler: 6
 
+[1201210023_ChriseleArthaliaPutri](1201210023_ChriseleArthaliaPutri)
+- hackerrank: 14
+- projectuler: 6
+
 [1201210024_SahityaRizkyHadiSusetyo](1201210024_SahityaRizkyHadiSusetyo)
 - hackerrank: 14
 - projecteuler: 6
@@ -109,4 +113,4 @@ compiler online: https://www.online-cpp.com/
 - hackerrank: 14
 - projecteuler: 6
 
-total 23
+total 24
