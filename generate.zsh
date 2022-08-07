@@ -17,9 +17,9 @@ header(){
 
   printf "please use c++ language\n\n"
 
-  printf "compiler online: https://www.online-cpp.com/\n\n"
- 
-  printf "*Nama folder jangan ada spasi*\n\n"
+  printf "*folder name can't contain spaces*\n\n"
+
+  printf "---<details><summary>see more</summary><br/>\n\n"
 }
 
 
@@ -42,7 +42,9 @@ generate(){
     printf "\n"
   done
 
-  printf "\ntotal %d\n"  $num
+  printf "\ntotal %d\n\n"  $num
+
+  printf "</details>\n"
 }
 
 

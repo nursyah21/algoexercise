@@ -11,9 +11,9 @@ deadline 15 july
 
 please use c++ language
 
-compiler online: https://www.online-cpp.com/
+*folder name can't contain spaces*
 
-*Nama folder jangan ada spasi*
+---<details><summary>see more</summary><br/>
 
 ---
 
@@ -117,4 +117,12 @@ compiler online: https://www.online-cpp.com/
 - hackerrank: 14
 - projecteuler: 6
 
-total 25
+[alstrukdataCpp](alstrukdataCpp)
+- image: 0
+- implementation: 3
+- old: 1
+- textfile: 0
+
+total 26
+
+</details>
