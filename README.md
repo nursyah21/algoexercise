@@ -117,4 +117,10 @@ compiler online: https://www.online-cpp.com/
 - hackerrank: 14
 - projecteuler: 6
 
-total 25
+[alstrukdataCpp](alstrukdataCpp)
+- image: 0
+- implementation: 3
+- old: 1
+- textfile: 0
+
+total 26
