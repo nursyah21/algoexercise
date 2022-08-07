@@ -1,0 +1,4 @@
+membuat program menggunakan circular list
+
+source code bisa ditaruh di pdf atau menggunakan gist github lalu dikirimkan linknya
+source code dikumpulkan ke elearning
