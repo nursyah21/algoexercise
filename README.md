@@ -15,7 +15,7 @@ please use c++ language
 
 *folder name can't contain spaces*
 
----<details><summary>see more</summary><br/>
+<details><summary>see more</summary><br/>
 
 ---
 
