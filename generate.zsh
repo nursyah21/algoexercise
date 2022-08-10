@@ -19,7 +19,7 @@ header(){
 
   printf "*folder name can't contain spaces*\n\n"
 
-  printf "---<details><summary>see more</summary><br/>\n\n"
+  printf "<details><summary>see more</summary><br/>\n\n"
 }
 
 
